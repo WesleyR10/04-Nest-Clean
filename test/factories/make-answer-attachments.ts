@@ -1,5 +1,4 @@
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
-
 import {
   AnswerAttachment,
   AnswerAttachmentProps,

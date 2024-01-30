@@ -1,14 +1,13 @@
 import { faker } from '@faker-js/faker'
+import { Injectable } from '@nestjs/common'
 
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
-
 import {
   QuestionComment,
   QuestionCommentProps,
 } from '@/domain/forum/enterprise/entities/question-comment'
-import { PrismaService } from '@/infra/database/prisma/prisma.service'
-import { Injectable } from '@nestjs/common'
 import { PrismaQuestionCommentMapper } from '@/infra/database/prisma/mappers/prisma-question-comment-mapper'
+import { PrismaService } from '@/infra/database/prisma/prisma.service'
 
 export function makeQuestionComment(
   override: Partial<QuestionCommentProps> = {},

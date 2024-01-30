@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import { Either, left, right } from '@/core/either'
-import { QuestionsRepository } from '../repositories/questions-repository'
-import { ResourceNotFoundError } from '@/core/errors/errors/resource-not-found-error'
 import { NotAllowedError } from '@/core/errors/errors/not-allowed-error'
+import { ResourceNotFoundError } from '@/core/errors/errors/resource-not-found-error'
+
+import { QuestionsRepository } from '../repositories/questions-repository'
 interface DeleteQuestionUseCaseRequest {
   authorId: string
   questionId: string

@@ -1,4 +1,5 @@
 import { Attachment as PrismaAttachment } from '@prisma/client'
+
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import { AnswerAttachment } from '@/domain/forum/enterprise/entities/answer-attachment'
 
