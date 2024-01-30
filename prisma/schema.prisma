@@ -21,7 +21,7 @@ model User {
 
   questions Question[]
   answers   Answer[]
-  comment   Comment[]
+  Comment   Comment[]
 
   @@map("users")
 }
