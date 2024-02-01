@@ -38,5 +38,8 @@ describe('Upload attachment (E2E)', () => {
       .attach('file', './test/e2e/sample-upload.jpg') // Precisa ser file pois e o mesmo nome dado no controller e depois o caminho do arquivo
 
     expect(response.statusCode).toBe(201)
+    expect(response.body).toEqual({
+      attachmentId: expect.any(String),
+    })
   })
 })

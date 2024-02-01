@@ -39,3 +39,4 @@ data
 
 # Env
 .env
+.env.test
