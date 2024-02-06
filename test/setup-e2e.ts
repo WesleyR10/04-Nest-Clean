@@ -4,6 +4,8 @@ import { randomUUID } from 'node:crypto'
 import { PrismaClient } from '@prisma/client'
 import { config } from 'dotenv'
 
+import { DomainEvents } from '@/core/events/domain-events'
+
 config({ path: '.env', override: true }) // Vai carregar todas as variáveis de ambiente do arquivo .env
 config({ path: '.env.test', override: true }) // Vai carregar todas as variáveis de ambiente do arquivo .env.test e sobrescrever as variáveis de ambiente do arquivo .env se houverem variáveis com o mesmo nome
 
@@ -27,6 +29,8 @@ beforeAll(async () => {
   const databaseURL = generateUniqueDatabaseURL(schemaId)
 
   process.env.DATABASE_URL = databaseURL
+
+  DomainEvents.shouldRun = false
 
   execSync('npx prisma migrate deploy')
 })
